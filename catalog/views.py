@@ -22,3 +22,8 @@ class BookListView(generic.ListView):
     queryset = Book.objects.filter(title__icontains='node')
     template_name = 'bools/my_arbitrary_template_name_list.html'
     model = Book
+
+
+class BookDetailView(generic.DetailView):
+    model = Book
+
