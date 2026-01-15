@@ -20,10 +20,11 @@ def index(request):
 class BookListView(generic.ListView):
     context_object_name = 'book_list'
     queryset = Book.objects.filter(title__icontains='node')
-    template_name = 'bools/my_arbitrary_template_name_list.html'
+    template_name = 'book_list.html'
     model = Book
 
 
 class BookDetailView(generic.DetailView):
     model = Book
+    template_name = 'book_detail.html'
 
